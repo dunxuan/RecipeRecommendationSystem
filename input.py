@@ -29,4 +29,3 @@ def setting_information():
     height = input("输入身高(cm):")
     weight = input("输入体重(kg):")
     waist = input("输入腰围(cm):")
-
