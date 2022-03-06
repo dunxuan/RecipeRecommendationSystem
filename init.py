@@ -1,7 +1,18 @@
-# 功能：初始化people列表
+# import
+import mysql.connector
+
+
+# import
+
+# 功能：连接recipe_recommendation_system数据库
 # 参数：无
-# 返回值：people列表
+# 返回值：数据库连接rrs_connect
 def init():
-    people = []
-    # 后期添加初始化sql的功能
-    return people
+    rrs_connect = mysql.connector.connect(
+        host='127.0.0.1',
+        user='rrs_admin',
+        password='rrs_admin',
+        database='recipe_recommendation_system',
+        port=3306
+    )
+    return rrs_connect
