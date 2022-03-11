@@ -1,9 +1,10 @@
 # 功能:sql查询
-# 参数:sql语句、sql连接
+# 参数:sql连接、sql语句
 # 返回:sql查询结果
-def sql_query(sql, sql_connect):
+def sql_query(db_connect, sql):
+    db_cursor = db_connect.cursor()
     # 执行sql语句
-    sql_connect.cursor.execute(sql)
+    db_cursor.execute(sql)
     # 获取查询结果
-    result = sql_connect.cursor.fetchone()
+    result = db_cursor.fetchone()
     return result
